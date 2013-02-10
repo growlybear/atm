@@ -6,4 +6,5 @@ group :development do
   gem 'rspec', '2.0.1'
   gem 'cucumber', '1.2.1'
   gem 'capybara', '2.0.2'
+  gem 'launchy', '2.2.0'
 end

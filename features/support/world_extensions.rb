@@ -1,5 +1,15 @@
 # Helper methods for the World
-module KnowsTheDomain
+module KnowsTheUserInterface
+  class UserInterface
+    include Capybara::DSL
+
+    def withdraw_from(account, amount)
+      visit '/'
+      fill_in 'Amount', :with => amount
+      click_button 'Withdraw'
+    end
+  end
+
   def my_account
     @my_account ||= Account.new
   end
@@ -9,8 +19,8 @@ module KnowsTheDomain
   end
 
   def teller
-    @teller ||= Teller.new(cash_slot)
+    @teller ||= UserInterface.new
   end
 end
 
-World(KnowsTheDomain)
+World(KnowsTheUserInterface)

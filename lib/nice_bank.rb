@@ -1,10 +1,4 @@
-require 'sinatra'
-
-get '/' do
-  'Welcome to our nice bank'
-end
-
-
+# Domain model
 class Account
   def balance
     @balance
@@ -40,4 +34,13 @@ class CashSlot
   def dispense(amount)
     @contents = amount
   end
+end
+
+
+
+# Sinatra application
+require 'sinatra'
+
+get '/' do
+  'Welcome to our nice bank'
 end

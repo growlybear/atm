@@ -5,10 +5,10 @@ transaction_queue = TransactionQueue.new
 
 puts "transaction processor ready"
 
-# loop do
-#   transaction_queue.read do |message|
-#     transaction_amount = message.to_i
-#     new_balance = balance_store.balance + transaction_amount
-#     balance_store.balance = new_balance
-#   end
-# end
+loop do
+  transaction_queue.read do |message|
+    transaction_amount = message.to_i
+    new_balance = balance_store.balance + transaction_amount
+    balance_store.balance = new_balance
+  end
+end

@@ -2,6 +2,7 @@ GEM
   remote: http://rubygems.org/
   specs:
     addressable (2.3.2)
+    background_process (1.3)
     builder (3.1.4)
     capybara (2.0.2)
       mime-types (>= 1.16)
@@ -48,10 +49,14 @@ GEM
       multi_json (~> 1.0)
       rubyzip
       websocket (~> 1.0.4)
+    service_manager (0.6.4)
+      background_process (>= 1.2)
+      tcpsocket-wait
     sinatra (1.3.4)
       rack (~> 1.4)
       rack-protection (~> 1.3)
       tilt (~> 1.3, >= 1.3.3)
+    tcpsocket-wait (1.0.0)
     tilt (1.3.3)
     websocket (1.0.7)
     xpath (1.0.0)
@@ -65,4 +70,5 @@ DEPENDENCIES
   cucumber (= 1.2.1)
   launchy (= 2.2.0)
   rspec (= 2.0.1)
+  service_manager (= 0.6.4)
   sinatra (= 1.3.4)

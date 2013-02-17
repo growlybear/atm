@@ -1,6 +1,7 @@
-# Before do |scenario|
-#   puts "Starting scenario: #{scenario.name}"
-# end
+Before do
+  BalanceStore.new.balance = 0
+  TransactionQueue.clear
+end
 
 # After do |scenario|
 #   puts "Oh dear, it failed :-(" if scenario.failed?
